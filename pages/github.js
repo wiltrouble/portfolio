@@ -1,9 +1,9 @@
 import Layout from "../components/Layout";
 
-const Index = () => (
+const Github = () => (
     <Layout>
-        <h1>hola mundo</h1>
+        <h1>github</h1>
     </Layout>
 )
 
-export default Index
+export default Github
