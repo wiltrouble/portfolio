@@ -1,5 +1,7 @@
 import Github from "../pages/github";
 import Navbar from "./Navbar";
+import Head from "next/head";
+
 const Layout = ({children}) => (
     <>
         <Navbar/>
