@@ -1,8 +1,13 @@
+import Github from "../pages/github";
 import Navbar from "./Navbar";
 const Layout = ({children}) => (
     <>
         <Navbar/>
-        {children}
+        <main>
+            <div className="container py-4">
+                {children}
+            </div>
+        </main>
     </>
 )
 
