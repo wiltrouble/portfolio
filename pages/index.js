@@ -87,7 +87,9 @@ const Index = () => (
                             projects.map(({name, description, image}, i) => (
                                 <div className="col-md-4 p-2">
                             <div className="card h-100">
-                                <img src={`/${image}`} className="img-fluid"/>
+                                <div className="overflow">
+                                    <img src={`/${image}`} className="card-img-top"/>
+                                </div>
                                 <div className="card-body">
                                     <h3>{name}</h3>
                                     <p>{description}</p>
@@ -98,7 +100,17 @@ const Index = () => (
                             ))
                         }
                     </div>
+
+            
+                <div className="text-center m-2">
+                    <Link href="/portfolio">
+                        <a className="btn btn-light">More projects</a>
+                    </Link>
+                </div>
+            
+                    
                 </div>                      
+                
             </div>
         </div>
     </Layout>

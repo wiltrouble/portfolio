@@ -10,6 +10,13 @@ const Layout = ({children}) => (
                 {children}
             </div>
         </main>
+
+        <footer className="bg-dark text-light text-center">
+            <div className="container p-4">
+            <h5>&copy; Wilson Lopez Portfolio</h5>
+                <p>2016 - {new Date().getFullYear()}</p>
+            </div>
+        </footer>
     </>
 )
 
