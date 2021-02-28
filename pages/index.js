@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
+import { skills, experience, projects} from "../profile";
 
 const Index = () => (
     <Layout>
@@ -32,31 +33,73 @@ const Index = () => (
                 <div className="card bg-light">
                     <div className="card-body">
                         <h1>Skills</h1>
-                        <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
-                        </ul>
+                        {
+                            skills.map(({skill, percentage}, i) => (
+                                <div className="py-3"  key={i}>
+                                    <h5>{skill}</h5>
+                                    <div className="progress">
+                                        {console.log(percentage)}
+                                        <div className="progress-bar" role="progressbar" style={{width: `${percentage}%`}}>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>
             <div className="col-md-8">
                 <div className="card bg-light">
                     <div className="card-body">
-                        <h1>Skills</h1>
+                        <h1>Experience</h1>
                         <ul>
-                            <li>1</li>
-                            <li>2</li>
-                            <li>3</li>
-                            <li>4</li>
-                            <li>5</li>
+                            {
+                                experience.map(({title, description, from, to}, i) => (
+                                    <li key={i}>
+                                        <h3>{title}</h3>
+                                        <h5>{`${from} - ${to? to: 'Current'}`}</h5>
+                                        <p>
+                                            {description}
+                                        </p>
+                                    </li>
+                                ))
+                            }
                         </ul>
+                        <Link href="/experiences">
+                            <a className="btn btn-dark">
+                                Know More
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>
 
+        </div>
+
+        <div className="row">
+            <div className="col-md-12">
+                <div className="card card-body bg-dark">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <h1 className="text-light">Portfolio</h1>
+                        </div>
+                        {
+                            projects.map(({name, description, image}, i) => (
+                                <div className="col-md-4 p-2">
+                            <div className="card h-100">
+                                <img src={`/${image}`} className="img-fluid"/>
+                                <div className="card-body">
+                                    <h3>{name}</h3>
+                                    <p>{description}</p>
+                                    <a href="">Know more</a>
+                                </div>
+                                </div>
+                            </div>
+                            ))
+                        }
+                    </div>
+                </div>                      
+            </div>
         </div>
     </Layout>
 )
