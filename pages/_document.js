@@ -12,11 +12,13 @@ class MyDocument extends Document {
         <Head>
             <title>My portfolio</title>
             <meta name="description" content="Wilson Lopez portfolio"></meta>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css"></link>
         </Head>
         <body>
           <Main />
           <NextScript />
         </body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js" integrity="sha512-bUg5gaqBVaXIJNuebamJ6uex//mjxPk8kljQTdM1SwkNrQD7pjS+PerntUSD+QRWPNJ0tq54/x4zRV8bLrLhZg==" crossorigin="anonymous"></script>
       </Html>
     )
   }
