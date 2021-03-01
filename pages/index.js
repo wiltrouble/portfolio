@@ -6,7 +6,7 @@ const Index = () => (
     <Layout>
         <header className="row">
             <div className="col-md-12">
-                <div className="card card-body bg-secondary text-light">
+                <div className="card card-body bg-dark text-light">
                     <div className="row">
                         <div className="col-md-4 d-flex justify-content-center">
                             <img src="profile.jpg" className="img-fluid"/>
